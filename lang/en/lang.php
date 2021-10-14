@@ -42,7 +42,7 @@
         'jkshop_itemurl_comment'     => 'Only specify the fixed part of the URL without any dynamic parameters',
         'jkshop_itemurl_badge'       => 'Product',
         'experimental'               => 'Experimental feature:',
-        'experimental_refer_to_docs' => 'This provider is experimental! There is a known issue with AJAX autocompletion, so make sure you have deactivaed autocompletion of your searchinput before using it.',
+        'experimental_refer_to_docs' => 'This provider is experimental!',
         'news_page'                  => 'News post page',
         'news_page_comment'          => 'Select a page used to display a single news post. Needed to form URL for news.',
     ],

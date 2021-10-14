@@ -19,8 +19,6 @@ You can translate all contents into your own language.
 * [Winter.Blog](https://github.com/wintercms/wn-blog-plugin)
 * Native CMS pages (experimental)
 
-**Warning:** there is a know AJAX issue with native CMS pages when autocompletion is turned on. Please make sure to deactivate autocompletion before using it.
-
 ## Supported but deactivated
 
 These plugins are supported but inactivated by default.

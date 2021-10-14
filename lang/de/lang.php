@@ -42,7 +42,7 @@
         'jkshop_itemurl_comment'     => 'Gib nur den statischen Teil der URL ein, keine dynamischen Parameter',
         'jkshop_itemurl_badge'       => 'Produkt',
         'experimental'               => 'Experimentelle Funktion:',
-        'experimental_refer_to_docs' => 'Dieser Provider ist experimentell! Es gibt ein bekanntes Ajax Problem mit AJAX autocompletion, deswegen Suche während der Eingabe vor der Benutzung deaktiverien.',
+        'experimental_refer_to_docs' => 'Dieser Provider ist experimentell!',
     ],
     'searchResults'     => [
         'title'       => 'Suchresultate',
