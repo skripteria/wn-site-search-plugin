@@ -1,9 +1,9 @@
-<?php namespace OFFLINE\SiteSearch\Components;
+<?php namespace Winter\SiteSearch\Components;
 
 use Cms\Classes\Page;
 use DomainException;
-use OFFLINE\SiteSearch\Classes\ResultCollection;
-use OFFLINE\SiteSearch\Classes\SearchService;
+use Winter\SiteSearch\Classes\ResultCollection;
+use Winter\SiteSearch\Classes\SearchService;
 use Request;
 
 class SearchInput extends BaseComponent
@@ -49,8 +49,8 @@ class SearchInput extends BaseComponent
     public function componentDetails()
     {
         return [
-            'name'        => 'offline.sitesearch::lang.searchInput.title',
-            'description' => 'offline.sitesearch::lang.searchInput.description',
+            'name'        => 'winter.sitesearch::lang.searchInput.title',
+            'description' => 'winter.sitesearch::lang.searchInput.description',
         ];
     }
 
@@ -63,26 +63,26 @@ class SearchInput extends BaseComponent
     {
         return [
             'useAutoComplete' => [
-                'title'       => 'offline.sitesearch::lang.searchInput.properties.use_auto_complete.title',
+                'title'       => 'winter.sitesearch::lang.searchInput.properties.use_auto_complete.title',
                 'type'        => 'checkbox',
                 'default'     => 1,
             ],
             'autoCompleteResultCount' => [
-                'title'             => 'offline.sitesearch::lang.searchInput.properties.auto_complete_result_count.title',
+                'title'             => 'winter.sitesearch::lang.searchInput.properties.auto_complete_result_count.title',
                 'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'Please enter only numbers',
                 'default'           => '5',
             ],
             'showProviderBadge' => [
-                'title'       => 'offline.sitesearch::lang.searchResults.properties.provider_badge.title',
-                'description' => 'offline.sitesearch::lang.searchResults.properties.provider_badge.description',
+                'title'       => 'winter.sitesearch::lang.searchResults.properties.provider_badge.title',
+                'description' => 'winter.sitesearch::lang.searchResults.properties.provider_badge.description',
                 'type'        => 'checkbox',
                 'default'     => 1,
             ],
             'searchPage'              => [
-                'title'       => 'offline.sitesearch::lang.searchInput.properties.search_page.title',
-                'description' => 'offline.sitesearch::lang.searchInput.properties.search_page.description',
+                'title'       => 'winter.sitesearch::lang.searchInput.properties.search_page.title',
+                'description' => 'winter.sitesearch::lang.searchInput.properties.search_page.description',
                 'type'        => 'dropdown',
             ],
         ];
@@ -99,7 +99,7 @@ class SearchInput extends BaseComponent
 
         $options = $pages->pluck('title', 'fileName')->toArray();
 
-        return ['' => trans('offline.sitesearch::lang.searchInput.properties.search_page.null_value'),] + $options;
+        return ['' => trans('winter.sitesearch::lang.searchInput.properties.search_page.null_value'),] + $options;
     }
 
     /**
@@ -115,7 +115,7 @@ class SearchInput extends BaseComponent
     }
 
     /**
-     * Triggered by October's AJAX framework when
+     * Triggered by Winter's AJAX framework when
      * the users enters a query.
      *
      * @return array

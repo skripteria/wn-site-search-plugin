@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\SiteSearch\Controllers;
+<?php namespace Winter\SiteSearch\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -16,13 +16,13 @@ class QueryLogs extends Controller
     public $listConfig = 'config_list.yaml';
     public $importExportConfig = 'config_import_export.yaml';
 
-    public $requiredPermissions = ['offline.sitesearch.view_log'];
+    public $requiredPermissions = ['winter.sitesearch.view_log'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.System', 'system', 'settings');
+        BackendMenu::setContext('Winter.System', 'system', 'settings');
         SettingsManager::setContext('OFFLINE.SiteSearch', 'querylogs');
     }
 }

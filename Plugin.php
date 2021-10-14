@@ -1,6 +1,6 @@
-<?php namespace OFFLINE\SiteSearch;
+<?php namespace Winter\SiteSearch;
 
-use OFFLINE\SiteSearch\Models\Settings;
+use Winter\SiteSearch\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -16,11 +16,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'offline.sitesearch::lang.plugin.name',
-            'description' => 'offline.sitesearch::lang.plugin.description',
-            'author' => 'offline.sitesearch::lang.plugin.author',
+            'name' => 'winter.sitesearch::lang.plugin.name',
+            'description' => 'winter.sitesearch::lang.plugin.description',
+            'author' => 'winter.sitesearch::lang.plugin.author',
             'icon' => 'icon-search',
-            'homepage' => 'https://github.com/OFFLINE-GmbH/oc-site-search-plugin',
+            'homepage' => 'https://github.com/wintercms/wn-site-search-plugin',
         ];
     }
 
@@ -32,9 +32,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'OFFLINE\SiteSearch\Components\SearchResults' => 'searchResults',
-            'OFFLINE\SiteSearch\Components\SearchInput' => 'searchInput',
-            'OFFLINE\SiteSearch\Components\SiteSearchInclude' => 'siteSearchInclude',
+            'Winter\SiteSearch\Components\SearchResults' => 'searchResults',
+            'Winter\SiteSearch\Components\SearchInput' => 'searchInput',
+            'Winter\SiteSearch\Components\SiteSearchInclude' => 'siteSearchInclude',
         ];
     }
 
@@ -46,13 +46,13 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'offline.sitesearch.manage_settings' => [
-                'tab' => 'offline.sitesearch::lang.plugin.name',
-                'label' => 'offline.sitesearch::lang.plugin.manage_settings_permission',
+            'winter.sitesearch.manage_settings' => [
+                'tab' => 'winter.sitesearch::lang.plugin.name',
+                'label' => 'winter.sitesearch::lang.plugin.manage_settings_permission',
             ],
-            'offline.sitesearch.view_log' => [
-                'tab' => 'offline.sitesearch::lang.plugin.name',
-                'label' => 'offline.sitesearch::lang.plugin.view_log_permission',
+            'winter.sitesearch.view_log' => [
+                'tab' => 'winter.sitesearch::lang.plugin.name',
+                'label' => 'winter.sitesearch::lang.plugin.view_log_permission',
             ],
         ];
     }
@@ -66,14 +66,14 @@ class Plugin extends PluginBase
     {
         $settings = [
             'config' => [
-                'label' => 'offline.sitesearch::lang.plugin.name',
-                'description' => 'offline.sitesearch::lang.plugin.manage_settings',
+                'label' => 'winter.sitesearch::lang.plugin.name',
+                'description' => 'winter.sitesearch::lang.plugin.manage_settings',
                 'category' => 'system::lang.system.categories.cms',
                 'icon' => 'icon-search',
-                'class' => 'Offline\SiteSearch\Models\Settings',
+                'class' => 'Winter\SiteSearch\Models\Settings',
                 'order' => 100,
                 'keywords' => 'search',
-                'permissions' => ['offline.sitesearch.manage_settings'],
+                'permissions' => ['winter.sitesearch.manage_settings'],
             ],
         ];
 
@@ -82,13 +82,13 @@ class Plugin extends PluginBase
         }
 
         $settings['querylogs'] = [
-            'label' => 'offline.sitesearch::lang.log.title',
-            'description' => 'offline.sitesearch::lang.log.description',
+            'label' => 'winter.sitesearch::lang.log.title',
+            'description' => 'winter.sitesearch::lang.log.description',
             'category' => 'system::lang.system.categories.cms',
-            'url' => \Backend::url('offline/sitesearch/querylogs'),
+            'url' => \Backend::url('winter/sitesearch/querylogs'),
             'keywords' => 'search log query queries',
             'icon' => 'icon-search',
-            'permissions' => ['offline.sitesearch.*'],
+            'permissions' => ['winter.sitesearch.*'],
             'order' => 99,
         ];
 

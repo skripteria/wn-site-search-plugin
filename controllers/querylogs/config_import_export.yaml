@@ -1,4 +1,4 @@
 export:
-    title: offline.sitesearch::lang.log.export
-    modelClass: OFFLINE\SiteSearch\Models\QueryLogExport
-    list: $/offline/sitesearch/models/querylog/columns.yaml
+    title: winter.sitesearch::lang.log.export
+    modelClass: Winter\SiteSearch\Models\QueryLogExport
+    list: $/winter/sitesearch/models/querylog/columns.yaml

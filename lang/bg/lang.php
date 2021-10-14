@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Глобално търсене за вашия фронтенд',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Winter CMS',
         'manage_settings'            => 'Управление на SiteSearch настройките',
         'manage_settings_permission' => 'Може да управлява SiteSearch настройките',
     ],
@@ -39,8 +39,7 @@
         'jkshop_itemurl_comment'     => 'Моля, отбележете само статучната част от URL-то без динамичните параметри',
         'jkshop_itemurl_badge'       => 'Продукт',
         'experimental'               => 'Експериментални възможности:',
-        'experimental_refer_to_docs' => 'Този доставчик е експериментален! Моля, погледнете <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">документацията</a> преди да го използвате.',
+        'experimental_refer_to_docs' => 'Този доставчик е експериментален! ',
     ],
     'searchResults'     => [
         'title'       => 'Резултати от търсенето',

@@ -1,11 +1,11 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Classes;
+namespace Winter\SiteSearch\Classes;
 
 use Config;
 use Html;
-use October\Rain\Database\Model;
-use OFFLINE\SiteSearch\Models\Settings;
+use Winter\Storm\Database\Model;
+use Winter\SiteSearch\Models\Settings;
 use Str;
 use System\Models\File;
 use URL;
@@ -13,7 +13,7 @@ use URL;
 /**
  * Object to store a result's data.
  *
- * @package OFFLINE\SiteSearch\Classes
+ * @package Winter\SiteSearch\Classes
  */
 class Result
 {

@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\SiteSearch\Models;
+<?php namespace Winter\SiteSearch\Models;
 
 class QueryLogExport extends \Backend\Models\ExportModel
 {

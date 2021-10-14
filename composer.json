@@ -1,12 +1,30 @@
 {
-    "name": "offline/oc-site-search-plugin",
-    "description": "This plugin adds global search capabiliies to OctoberCMS.",
-    "type": "october-plugin",
+    "name": "winter/wn-site-search-plugin",
+    "type": "winter-plugin",
+    "description": "This plugin adds global search capabiliies to WinterCMS.",
+    "homepage": "https://github.com/wintercms/wn-site-search-plugin",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Offline GmbH",
+            "homepage": "https://offline.ch/",
+            "role": "Original Author"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/wintercms/wn-site-search-plugin/issues",
+        "discord": "https://discord.gg/D5MFSPH6Ux",
+        "source": "https://github.com/wintercms/wn-site-search-plugin"
+    },
     "require": {
         "composer/installers": "~1.0"
     },
     "extra": {
         "installer-name": "sitesearch"
-    }  
+    }
 }

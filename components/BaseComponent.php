@@ -1,10 +1,10 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Components;
-use Cms\Classes\ComponentBase as OctoberBaseComponent;
+namespace Winter\SiteSearch\Components;
+use Cms\Classes\ComponentBase as WinterBaseComponent;
 
 
-abstract class BaseComponent extends OctoberBaseComponent
+abstract class BaseComponent extends WinterBaseComponent
 {
     /**
      * Sets a var as a property on this class

@@ -1,28 +1,30 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Classes;
+namespace Winter\SiteSearch\Classes;
 
 
 use Cms\Classes\Controller;
 use Event;
 use Illuminate\Support\Collection;
 use LogicException;
-use OFFLINE\SiteSearch\Classes\Providers\ArrizalaminPortfolioResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\CmsPagesResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\FeeglewebOctoshopProductsResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\GenericResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\GrakerPhotoAlbumsResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\IndikatorNewsResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\JiriJKShopResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\OfflineSnipcartShopResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\RadiantWebProBlogResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\RainlabBlogResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\RainlabPagesResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\ResponsivShowcaseResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\ResultsProvider;
-use OFFLINE\SiteSearch\Classes\Providers\VojtaSvobodaBrandsResultsProvider;
-use OFFLINE\SiteSearch\Models\QueryLog;
-use OFFLINE\SiteSearch\Models\Settings;
+
+// Uncomment your required Providers here
+// use Winter\SiteSearch\Classes\Providers\ArrizalaminPortfolioResultsProvider;
+use Winter\SiteSearch\Classes\Providers\CmsPagesResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\FeeglewebOctoshopProductsResultsProvider;
+use Winter\SiteSearch\Classes\Providers\GenericResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\GrakerPhotoAlbumsResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\IndikatorNewsResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\JiriJKShopResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\OfflineSnipcartShopResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\RadiantWebProBlogResultsProvider;
+use Winter\SiteSearch\Classes\Providers\WinterBlogResultsProvider;
+use Winter\SiteSearch\Classes\Providers\WinterPagesResultsProvider;
+use Winter\SiteSearch\Classes\Providers\ResponsivShowcaseResultsProvider;
+use Winter\SiteSearch\Classes\Providers\ResultsProvider;
+// use Winter\SiteSearch\Classes\Providers\VojtaSvobodaBrandsResultsProvider;
+use Winter\SiteSearch\Models\QueryLog;
+use Winter\SiteSearch\Models\Settings;
 
 class SearchService
 {
@@ -74,7 +76,7 @@ class SearchService
 
         $resultsCollection->addMany($results->toArray());
 
-        $modified = Event::fire('offline.sitesearch.results', $resultsCollection);
+        $modified = Event::fire('winter.sitesearch.results', $resultsCollection);
 
         $modified = array_filter($modified);
 
@@ -100,19 +102,21 @@ class SearchService
     protected function nativeResultsProviders()
     {
         return [
-            new OfflineSnipcartShopResultsProvider(),
-            new RadiantWebProBlogResultsProvider($this->query, $this->controller),
-            new FeeglewebOctoshopProductsResultsProvider(),
-            new JiriJKShopResultsProvider(),
-            new IndikatorNewsResultsProvider(),
-            new ArrizalaminPortfolioResultsProvider(),
+            // Uncomment the required Provider here
+
+            // new OfflineSnipcartShopResultsProvider(),
+            // new RadiantWebProBlogResultsProvider($this->query, $this->controller),
+            // new FeeglewebOctoshopProductsResultsProvider(),
+            // new JiriJKShopResultsProvider(),
+            // new IndikatorNewsResultsProvider(),
+            // new ArrizalaminPortfolioResultsProvider(),
             new ResponsivShowcaseResultsProvider(),
-            new RainlabBlogResultsProvider($this->query, $this->controller),
-            new RainlabPagesResultsProvider(),
+            new WinterBlogResultsProvider($this->query, $this->controller),
+            new WinterPagesResultsProvider(),
             new CmsPagesResultsProvider(),
             new GenericResultsProvider(),
-            new VojtaSvobodaBrandsResultsProvider(),
-            new GrakerPhotoAlbumsResultsProvider($this->query, $this->controller),
+            // new VojtaSvobodaBrandsResultsProvider(),
+            // new GrakerPhotoAlbumsResultsProvider($this->query, $this->controller),
         ];
     }
 
@@ -125,11 +129,11 @@ class SearchService
      */
     protected function additionalResultsProviders()
     {
-        $returns = collect(Event::fire('offline.sitesearch.extend'))->filter()->flatten();
+        $returns = collect(Event::fire('winter.sitesearch.extend'))->filter()->flatten();
 
         $returns->each(function ($return) {
             if ( ! $return instanceof ResultsProvider) {
-                throw new LogicException('The offline.sitesearch.extend listener needs to return a ResultsProvider instance.');
+                throw new LogicException('The winter.sitesearch.extend listener needs to return a ResultsProvider instance.');
             }
         });
 

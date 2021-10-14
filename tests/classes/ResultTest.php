@@ -1,6 +1,6 @@
 <?php namespace OFFLINE\SnipcartShop\Tests\Models;
 
-use OFFLINE\SiteSearch\Classes\Result;
+use Winter\SiteSearch\Classes\Result;
 use PluginTestCase;
 
 class ResultTest extends PluginTestCase

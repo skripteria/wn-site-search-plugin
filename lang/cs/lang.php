@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Globální vyhledávání pro váš frontend',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Winter CMS',
         'manage_settings'            => 'Správa SiteSearch nastavení',
         'manage_settings_permission' => 'Možnost měnit SiteSearch nastavení',
         'view_log_permission'        => 'Možnost prohlížet protokol hledaných výrazů',
@@ -42,7 +42,7 @@
         'jkshop_itemurl_comment'     => 'Zadejte pevnou část URL bez dynamických parametrů, jako je konkrétní URL článku, nebo stránkování',
         'jkshop_itemurl_badge'       => 'Produkt',
         'experimental'               => 'Experimentalní funkce:',
-        'experimental_refer_to_docs' => 'Tato služba je zatím v testování! Před použitím doporučujeme přečíst <a target="_blank" href="https://octobercms.com/plugin/offline-sitesearch#documentation">stránku dokumentace</a>.',
+        'experimental_refer_to_docs' => 'Tato služba je zatím v testování! ',
         'news_page'                  => 'Stránka s novinkou',
         'news_page_comment'          => 'Vyberte stránku používanou k zobrazení detailu jednotlivé novinky. Je to nezbytné pro vytváření správných URL novinek.',
     ],

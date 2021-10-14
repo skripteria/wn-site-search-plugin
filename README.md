@@ -1,6 +1,6 @@
-# SiteSearch Plugin for OctoberCMS
+# SiteSearch Plugin for WinterCMS
 
-This plugin adds global search capabilities to OctoberCMS.
+This plugin adds global search capabilities to WinterCMS.
 
 ## Available languages
 
@@ -15,8 +15,23 @@ You can translate all contents into your own language.
 
 ## Currently supported content types
 
-* [RainLab.Pages](https://octobercms.com/plugin/rainlab-pages)
-* [RainLab.Blog](https://octobercms.com/plugin/rainlab-blog)
+* [Winter.Pages](https://github.com/wintercms/wn-pages-plugin)
+* [Winter.Blog](https://github.com/wintercms/wn-blog-plugin)
+* Native CMS pages (experimental)
+
+**Warning:** there is a know AJAX issue with native CMS pages when autocompletion is turned on. Please make sure to deactivate autocompletion before using it.
+
+## Supported but deactivated
+
+These plugins are supported but inactivated by default.
+You can manually activate them by removing the comments in following files:
+
+```html
+{PLUGIN ROOT}/models/settings/fields.yaml
+{PLUGIN ROOT}/classes/SearchService.php
+```
+
+
 * [Indikator.News](https://github.com/gergo85/oc-news)
 * [Feegleweb.Octoshop](https://octobercms.com/plugin/feegleweb-octoshop)
 * [Jiri.JKShop](http://octobercms.com/plugin/jiri-jkshop)
@@ -25,9 +40,9 @@ You can translate all contents into your own language.
 * [Responsiv.Showcase](https://octobercms.com/plugin/responsiv-showcase)
 * [VojtaSvoboda.Brands](https://octobercms.com/plugin/vojtasvoboda-brands)
 * [Graker.PhotoAlbums](https://octobercms.com/plugin/graker-photoalbums)
-* Native CMS pages (experimental)
 
-**Multilingual contents via RainLab.Translate are supported.**
+
+**Multilingual contents via Winter.Translate are supported.**
 
 Support for more plugins is added upon request.
 
@@ -37,9 +52,9 @@ See the documentation for further information.**
 ### Get native support for your plugin
 
 If you are a plugin developer and wish to have native support for your contents in SiteSearch please submit a pull
-request for your search provider or send us a copy of you plugin so we can create the provider for you.
+request for your search provider.
 
-We cannot add support for every plugin but will add any plugin that has a notable project count on the October
+We cannot add support for every plugin but will add any plugin that has a notable project count on the Winter
 Marketplace.
 
 
@@ -139,9 +154,9 @@ function onStart()
 {% component 'searchResults' %}
 ```
 
-#### Change the results collection before displaying 
+#### Change the results collection before displaying
 
-You can listen for the `offline.sitesearch.results` event and modify the query as you wish.
+You can listen for the `winter.sitesearch.results` event and modify the query as you wish.
 
 This is useful to remove certain results or change the sort order.
 
@@ -154,7 +169,7 @@ visitPageMessage = "Visit page"
 ==
 function onInit()
 {
-    \Event::listen('offline.sitesearch.results', function ($results) {
+    \Event::listen('winter.sitesearch.results', function ($results) {
         // return $results->filter(...);
         return $results->sortByDesc('model.custom_attribute');
     });
@@ -240,7 +255,7 @@ If this property is enabled, a search query will be executed as soon as the user
 
 ##### autoCompleteResultCount
 
-This many results will be displayed to the user below the input field. There will be a 
+This many results will be displayed to the user below the input field. There will be a
 "Show all results" link the user can click that takes her to a full search results page if one has
 been specified via the `searchPage` property.
 
@@ -253,24 +268,24 @@ This is useful if your site has many different entities (ex. teams, employees, p
 
 ##### searchPage
 
-The filename of the page where you have placed a `searchResults` component. If a user clicks on the "Show all 
+The filename of the page where you have placed a `searchResults` component. If a user clicks on the "Show all
 results" link it will take him to this page where a full search is run using the `searchResults` component.
 
 ## Add support for custom plugin contents
 
 ### Simple method
 
-To return search results for you own custom plugin, register an event listener for the `offline.sitesearch.query`
+To return search results for you own custom plugin, register an event listener for the `winter.sitesearch.query`
 event in your plugin's boot method.
 
-Return an array containing a `provider` string and `results` array. Each result must provide at least a `title` key.  
+Return an array containing a `provider` string and `results` array. Each result must provide at least a `title` key.
 
 #### Example to search for custom `documents`
 
 ```php
 public function boot()
 {
-    \Event::listen('offline.sitesearch.query', function ($query) {
+    \Event::listen('winter.sitesearch.query', function ($query) {
 
         // The controller is used to generate page URLs.
         $controller = \Cms\Classes\Controller::getController() ?? new \Cms\Classes\Controller();
@@ -286,12 +301,12 @@ public function boot()
 
             // If the query is found in the title, set a relevance of 2
             $relevance = mb_stripos($item->title, $query) !== false ? 2 : 1;
-            
+
             // Optional: Add an age penalty to older results. This makes sure that
             // newer results are listed first.
             // if ($relevance > 1 && $item->created_at) {
             //    $ageInDays = $item->created_at->diffInDays(\Illuminate\Support\Carbon::now());
-            //    $relevance -= \OFFLINE\SiteSearch\Classes\Providers\ResultsProvider::agePenaltyForDays($ageInDays);
+            //    $relevance -= \Winter\SiteSearch\Classes\Providers\ResultsProvider::agePenaltyForDays($ageInDays);
             // }
 
             return [
@@ -303,7 +318,7 @@ public function boot()
                                            // position in the results listing
                 // 'meta' => 'data',       // optional, any other information you want
                                            // to associate with this result
-                // 'model' => $item,       // optional, pass along the original model
+                // 'model' => $item,       // optional, pass along the original model[]
             ];
         });
 
@@ -319,31 +334,31 @@ That's it!
 
 ### Advanced method
 
-If you need a bit more flexibility you can also create your own `ResultsProvider` class. Simply extend SiteSearch's 
+If you need a bit more flexibility you can also create your own `ResultsProvider` class. Simply extend SiteSearch's
 `ResultProvider` and implement the needed methods. Have a look at the existing providers shipped by this plugin to get
 an idea of all the possibilities.
 
-When your own `ResultsProvider` class is ready, register an event listener for the `offline.sitesearch.extend`
+When your own `ResultsProvider` class is ready, register an event listener for the `winter.sitesearch.extend`
 event in your plugin's boot method. There you can return one `ResultsProvider` (or multiple in an array) which will
-be included every time a user runs a search on your website.  
+be included every time a user runs a search on your website.
 
 #### Advanced example to search for custom `documents`
 
 ```php
 public function boot()
 {
-    Event::listen('offline.sitesearch.extend', function () {
+    Event::listen('winter.sitesearch.extend', function () {
         return new DocumentsSearchProvider();
-        
+
         // or
-        // return [new DocumentsSearchProvider(), new FilesSearchProvider()]; 
+        // return [new DocumentsSearchProvider(), new FilesSearchProvider()];
     });
 }
 ```
 
 ```php
 <?php
-use OFFLINE\SiteSearch\Classes\Providers\ResultsProvider;
+use Winter\SiteSearch\Classes\Providers\ResultsProvider;
 
 class DocumentsSearchProvider extends ResultsProvider
 {
@@ -389,13 +404,13 @@ class DocumentsSearchProvider extends ResultsProvider
 
 ## Settings
 
-You can manage all of this plugin's settings in the October CMS backend.
+You can manage all of this plugin's settings in the Winter CMS backend.
 
-### Rainlab.Pages
+### Winter.Pages
 
 No special configuration is required.
 
-### Rainlab.Blog
+### Winter.Blog
 
 Make sure you select your CMS page with the `blogPost` component as the `blog post page` in the backend settings.
 
@@ -448,7 +463,7 @@ plugin contents`)
 
 ## Overwrite default markup
 
-To overwrite the default markup copy all files from `plugins/offline/sitesearch/components/searchresults` to
+To overwrite the default markup copy all files from `plugins/winter/sitesearch/components/searchresults` to
 `themes/your-theme/partials/searchResults` and modify them as needed.
 
 If you gave an alias to the `searchResults` component make sure to put the markup in the appropriate partials directory `themes/your-theme/partials/your-given-alias`.

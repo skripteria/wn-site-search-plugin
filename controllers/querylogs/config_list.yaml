@@ -1,7 +1,7 @@
-list: $/offline/sitesearch/models/querylog/columns.yaml
-modelClass: OFFLINE\SiteSearch\Models\QueryLog
-title: offline.sitesearch::lang.log.title
-recordUrl: offline/sitesearch/querylogs/update/:id
+list: $/winter/sitesearch/models/querylog/columns.yaml
+modelClass: Winter\SiteSearch\Models\QueryLog
+title: winter.sitesearch::lang.log.title
+recordUrl: winter/sitesearch/querylogs/update/:id
 noRecordsMessage: backend::lang.list.no_records
 recordsPerPage: 20
 showPageNumbers: true

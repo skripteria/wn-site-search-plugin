@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Глобальный поиск для вашего фронтенда',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Winter CMS',
         'manage_settings'            => 'Управление настройками SiteSearch',
         'manage_settings_permission' => 'Разрешить управлять настройками SiteSearch',
         'view_log_permission'        => 'Может просматривать журнал поисковых запросов',
@@ -42,8 +42,7 @@
         'jkshop_itemurl_comment'     => 'Указывайте только фиксированную часть URL без каких-либо динамических параметров',
         'jkshop_itemurl_badge'       => 'Товар',
         'experimental'               => 'Эксперементальная фитча":',
-        'experimental_refer_to_docs' => 'Этот провайдер является эксперементальным! Пожалуйста, обратитесь <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">к документации</a> перед его использованием.',
+        'experimental_refer_to_docs' => 'Этот провайдер является эксперементальным!',
         'news_page'                  => 'Страница новости',
         'news_page_comment'          => 'Выберите страницу, используемую для отображения отдельного новостного сообщения. Требуется для формирования URL-адреса новостей.',
     ],

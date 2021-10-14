@@ -1,15 +1,15 @@
 <?php
-namespace OFFLINE\SiteSearch\Classes\Providers;
+namespace Winter\SiteSearch\Classes\Providers;
 
 use DomainException;
 use Event;
-use OFFLINE\SiteSearch\Classes\Result;
+use Winter\SiteSearch\Classes\Result;
 
 /**
  * Handles results that are provided by
  * other plugins via the event system.
  *
- * @package OFFLINE\SiteSearch\Classes\Providers
+ * @package Winter\SiteSearch\Classes\Providers
  */
 class GenericResultsProvider extends ResultsProvider
 {
@@ -21,7 +21,7 @@ class GenericResultsProvider extends ResultsProvider
      */
     public function search()
     {
-        $returns = array_filter(Event::fire('offline.sitesearch.query', $this->query));
+        $returns = array_filter(Event::fire('winter.sitesearch.query', $this->query));
 
         foreach ($returns as $return) {
             $results  = array_key_exists('results', $return) ? $return['results'] : [];

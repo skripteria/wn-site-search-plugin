@@ -1,19 +1,19 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Classes\Providers;
+namespace Winter\SiteSearch\Classes\Providers;
 
 use Cms\Classes\Controller;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Illuminate\Database\Eloquent\Collection;
-use OFFLINE\SiteSearch\Classes\Result;
-use OFFLINE\SiteSearch\Classes\ResultData;
-use OFFLINE\SiteSearch\Models\Settings;
+use Winter\SiteSearch\Classes\Result;
+use Winter\SiteSearch\Classes\ResultData;
+use Winter\SiteSearch\Models\Settings;
 
 /**
  * Searches the contents of native cms pages.
  *
- * @package OFFLINE\SiteSearch\Classes\Providers
+ * @package Winter\SiteSearch\Classes\Providers
  */
 class CmsPagesResultsProvider extends ResultsProvider
 {

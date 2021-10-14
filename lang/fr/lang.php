@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Recherche globale pour votre frontend',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Winter CMS',
         'manage_settings'            => 'Gérer les paramètres de SiteSearch',
         'manage_settings_permission' => 'Peut gérer les paramètres de SiteSearch',
         'view_log_permission'        => 'Peut consulter le journal des requêtes',
@@ -42,8 +42,7 @@
         'jkshop_itemurl_comment'     => 'Ne spécifier que la partie fixe de l\'URL sans aucun paramètre dynamique',
         'jkshop_itemurl_badge'       => 'Produit',
         'experimental'               => 'Fonctionnalité expérimentale:',
-        'experimental_refer_to_docs' => 'Ce fournisseur est expérimental ! Veuillez vous référer à <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">la documentation</a> avant utilisation.',
+        'experimental_refer_to_docs' => 'Ce fournisseur est expérimental !',
         'news_page'                  => 'Page des actualités',
         'news_page_comment'          => 'Sélectionnez une page utilisée pour afficher un seul article. Nécessaire pour former l\'URL des actualités.',
     ],

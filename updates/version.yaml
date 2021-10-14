@@ -46,13 +46,13 @@
 1.2.9:
     - 'Added support for static page component hosts'
 1.2.10:
-    - 'Added support for multiple variables in Rainlab.Blog urls (Thanks to graker)'
+    - 'Added support for multiple variables in Winter.Blog urls (Thanks to graker)'
 1.2.11:
     - 'Optimized handling of multibyte strings'
 1.2.12:
     - 'Added support for Jiri.Jkshop'
 1.2.13:
-    - 'Minor bugfixes for marked queries in search results and Rainlab.Blog provider (Thanks to graker)'
+    - 'Minor bugfixes for marked queries in search results and Winter.Blog provider (Thanks to graker)'
 1.2.14:
     - 'Fixed bug in Jiri.JKShop provider'
 1.2.15:
@@ -72,7 +72,7 @@
 1.2.22:
     - 'Fixed Portuguese translations'
 1.2.23:
-    - 'Fixed support for translated Rainlab.Blog contents'
+    - 'Fixed support for translated Winter.Blog contents'
 1.2.24:
     - 'Added composer.json to allow loading plugin as dependency (thanks to adduc)'
 1.2.25:
@@ -120,7 +120,7 @@
 1.3.13:
     - Pre-populate search query in searchInput field
 1.3.14:
-    - Include placeholders on Rainlab.Pages pages in search results
+    - Include placeholders on Winter.Pages pages in search results
 1.3.15:
     - Catch invalid markup errors when searching RainLab.Pages
 1.3.16:
@@ -141,11 +141,10 @@
     - 'SiteSearch can now log all search queries. Enable via backend settings.'
 1.4.1:
     - 'Minor bugfixes'
-    - create_offline_sitesearch_query_logs.php
 1.4.2:
     - 'Added User-Agent to list view'
 1.4.3:
-    - 'Fixed bug where empty queries resulted in an Exception' 
+    - 'Fixed bug where empty queries resulted in an Exception'
 1.4.4:
     - 'Optimized support for cms pages search: Your Twig markup is now completely rendered and searched!'
 1.4.5:
@@ -161,7 +160,7 @@
 1.4.10:
     - 'Improved Czech translations'
 1.5.0:
-    - 'Added `offline.sitesearch.results` event to allow customization (filter, sort) of the results collection before it is displayed'
+    - 'Added `winter.sitesearch.results` event to allow customization (filter, sort) of the results collection before it is displayed'
 1.5.1:
     - 'Fixed typo in the newly added event name'
 1.5.2:
@@ -171,6 +170,9 @@
 1.5.4:
     - 'Fixed handling of invalid page url parameter'
 1.5.5:
-    - 'Fixed handling of invalid offline.sitesearch.results event returns'
+    - 'Fixed handling of invalid winter.sitesearch.results event returns'
 1.5.6:
     - 'Updated russian translations (thanks to @Web-VPF)'
+2.0.1:
+    - 'Rebranded to Winter CMS'
+    - create_winter_sitesearch_query_logs.php
