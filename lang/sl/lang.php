@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'Iskalnik',
         'description'                => 'Globalno iskanje po spletnem mestu.',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Upravljanje z nastavitvami iskalnika.',
         'manage_settings_permission' => 'Upravljanje z nastavitvami iskalnika',
         'view_log_permission'        => 'Ogled dnevnika poizvedb v iskalniku',

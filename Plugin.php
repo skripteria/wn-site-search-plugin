@@ -1,6 +1,6 @@
-<?php namespace Winter\SiteSearch;
+<?php namespace Skripteria\Sitesearch;
 
-use Winter\SiteSearch\Models\Settings;
+use Skripteria\Sitesearch\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -16,9 +16,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'winter.sitesearch::lang.plugin.name',
-            'description' => 'winter.sitesearch::lang.plugin.description',
-            'author' => 'winter.sitesearch::lang.plugin.author',
+            'name' => 'skripteria.sitesearch::lang.plugin.name',
+            'description' => 'skripteria.sitesearch::lang.plugin.description',
+            'author' => 'skripteria.sitesearch::lang.plugin.author',
             'icon' => 'icon-search',
             'homepage' => 'https://github.com/wintercms/wn-site-search-plugin',
         ];
@@ -32,9 +32,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Winter\SiteSearch\Components\SearchResults' => 'searchResults',
-            'Winter\SiteSearch\Components\SearchInput' => 'searchInput',
-            'Winter\SiteSearch\Components\SiteSearchInclude' => 'siteSearchInclude',
+            'Skripteria\Sitesearch\Components\SearchResults' => 'searchResults',
+            'Skripteria\Sitesearch\Components\SearchInput' => 'searchInput',
+            'Skripteria\Sitesearch\Components\SiteSearchInclude' => 'siteSearchInclude',
         ];
     }
 
@@ -46,13 +46,13 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'winter.sitesearch.manage_settings' => [
-                'tab' => 'winter.sitesearch::lang.plugin.name',
-                'label' => 'winter.sitesearch::lang.plugin.manage_settings_permission',
+            'skripteria.sitesearch.manage_settings' => [
+                'tab' => 'skripteria.sitesearch::lang.plugin.name',
+                'label' => 'skripteria.sitesearch::lang.plugin.manage_settings_permission',
             ],
-            'winter.sitesearch.view_log' => [
-                'tab' => 'winter.sitesearch::lang.plugin.name',
-                'label' => 'winter.sitesearch::lang.plugin.view_log_permission',
+            'skripteria.sitesearch.view_log' => [
+                'tab' => 'skripteria.sitesearch::lang.plugin.name',
+                'label' => 'skripteria.sitesearch::lang.plugin.view_log_permission',
             ],
         ];
     }
@@ -66,14 +66,14 @@ class Plugin extends PluginBase
     {
         $settings = [
             'config' => [
-                'label' => 'winter.sitesearch::lang.plugin.name',
-                'description' => 'winter.sitesearch::lang.plugin.manage_settings',
+                'label' => 'skripteria.sitesearch::lang.plugin.name',
+                'description' => 'skripteria.sitesearch::lang.plugin.manage_settings',
                 'category' => 'system::lang.system.categories.cms',
                 'icon' => 'icon-search',
-                'class' => 'Winter\SiteSearch\Models\Settings',
+                'class' => 'Skripteria\Sitesearch\Models\Settings',
                 'order' => 100,
                 'keywords' => 'search',
-                'permissions' => ['winter.sitesearch.manage_settings'],
+                'permissions' => ['skripteria.sitesearch.manage_settings'],
             ],
         ];
 
@@ -82,13 +82,13 @@ class Plugin extends PluginBase
         }
 
         $settings['querylogs'] = [
-            'label' => 'winter.sitesearch::lang.log.title',
-            'description' => 'winter.sitesearch::lang.log.description',
+            'label' => 'skripteria.sitesearch::lang.log.title',
+            'description' => 'skripteria.sitesearch::lang.log.description',
             'category' => 'system::lang.system.categories.cms',
-            'url' => \Backend::url('winter/sitesearch/querylogs'),
+            'url' => \Backend::url('skripteria/sitesearch/querylogs'),
             'keywords' => 'search log query queries',
             'icon' => 'icon-search',
-            'permissions' => ['winter.sitesearch.*'],
+            'permissions' => ['skripteria.sitesearch.*'],
             'order' => 99,
         ];
 

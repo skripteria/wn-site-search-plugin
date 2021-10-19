@@ -154,7 +154,7 @@ function onStart()
 
 #### Change the results collection before displaying
 
-You can listen for the `winter.sitesearch.results` event and modify the query as you wish.
+You can listen for the `skripteria.sitesearch.results` event and modify the query as you wish.
 
 This is useful to remove certain results or change the sort order.
 
@@ -167,7 +167,7 @@ visitPageMessage = "Visit page"
 ==
 function onInit()
 {
-    \Event::listen('winter.sitesearch.results', function ($results) {
+    \Event::listen('skripteria.sitesearch.results', function ($results) {
         // return $results->filter(...);
         return $results->sortByDesc('model.custom_attribute');
     });
@@ -273,7 +273,7 @@ results" link it will take him to this page where a full search is run using the
 
 ### Simple method
 
-To return search results for you own custom plugin, register an event listener for the `winter.sitesearch.query`
+To return search results for you own custom plugin, register an event listener for the `skripteria.sitesearch.query`
 event in your plugin's boot method.
 
 Return an array containing a `provider` string and `results` array. Each result must provide at least a `title` key.
@@ -283,7 +283,7 @@ Return an array containing a `provider` string and `results` array. Each result 
 ```php
 public function boot()
 {
-    \Event::listen('winter.sitesearch.query', function ($query) {
+    \Event::listen('skripteria.sitesearch.query', function ($query) {
 
         // The controller is used to generate page URLs.
         $controller = \Cms\Classes\Controller::getController() ?? new \Cms\Classes\Controller();
@@ -304,7 +304,7 @@ public function boot()
             // newer results are listed first.
             // if ($relevance > 1 && $item->created_at) {
             //    $ageInDays = $item->created_at->diffInDays(\Illuminate\Support\Carbon::now());
-            //    $relevance -= \Winter\SiteSearch\Classes\Providers\ResultsProvider::agePenaltyForDays($ageInDays);
+            //    $relevance -= \Skripteria\Sitesearch\Classes\Providers\ResultsProvider::agePenaltyForDays($ageInDays);
             // }
 
             return [
@@ -336,7 +336,7 @@ If you need a bit more flexibility you can also create your own `ResultsProvider
 `ResultProvider` and implement the needed methods. Have a look at the existing providers shipped by this plugin to get
 an idea of all the possibilities.
 
-When your own `ResultsProvider` class is ready, register an event listener for the `winter.sitesearch.extend`
+When your own `ResultsProvider` class is ready, register an event listener for the `skripteria.sitesearch.extend`
 event in your plugin's boot method. There you can return one `ResultsProvider` (or multiple in an array) which will
 be included every time a user runs a search on your website.
 
@@ -345,7 +345,7 @@ be included every time a user runs a search on your website.
 ```php
 public function boot()
 {
-    Event::listen('winter.sitesearch.extend', function () {
+    Event::listen('skripteria.sitesearch.extend', function () {
         return new DocumentsSearchProvider();
 
         // or
@@ -356,7 +356,7 @@ public function boot()
 
 ```php
 <?php
-use Winter\SiteSearch\Classes\Providers\ResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\ResultsProvider;
 
 class DocumentsSearchProvider extends ResultsProvider
 {
@@ -461,7 +461,7 @@ plugin contents`)
 
 ## Overwrite default markup
 
-To overwrite the default markup copy all files from `plugins/winter/sitesearch/components/searchresults` to
+To overwrite the default markup copy all files from `plugins/skripteria/sitesearch/components/searchresults` to
 `themes/your-theme/partials/searchResults` and modify them as needed.
 
 If you gave an alias to the `searchResults` component make sure to put the markup in the appropriate partials directory `themes/your-theme/partials/your-given-alias`.

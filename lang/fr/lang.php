@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Recherche globale pour votre frontend',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Gérer les paramètres de SiteSearch',
         'manage_settings_permission' => 'Peut gérer les paramètres de SiteSearch',
         'view_log_permission'        => 'Peut consulter le journal des requêtes',

@@ -1,27 +1,27 @@
 fields:
     query:
-        label: 'winter.sitesearch::lang.log.query'
+        label: 'skripteria.sitesearch::lang.log.query'
         size: tiny
         span: auto
         type: textarea
     created_at:
-        label: 'winter.sitesearch::lang.log.created_at'
+        label: 'skripteria.sitesearch::lang.log.created_at'
         mode: datetime
         span: auto
         type: datepicker
     domain:
-        label: 'winter.sitesearch::lang.log.domain'
+        label: 'skripteria.sitesearch::lang.log.domain'
         span: auto
         type: text
     location:
-        label: 'winter.sitesearch::lang.log.location'
+        label: 'skripteria.sitesearch::lang.log.location'
         span: auto
         type: text
     session_id:
-        label: 'winter.sitesearch::lang.log.session_id'
+        label: 'skripteria.sitesearch::lang.log.session_id'
         span: auto
         type: text
     useragent:
-        label: 'winter.sitesearch::lang.log.useragent'
+        label: 'skripteria.sitesearch::lang.log.useragent'
         span: auto
         type: text

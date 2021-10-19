@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\SiteSearch\Components;
+namespace Skripteria\Sitesearch\Components;
 use Cms\Classes\ComponentBase as WinterBaseComponent;
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\SiteSearch\Classes;
+namespace Skripteria\Sitesearch\Classes;
 
 
 use Cms\Classes\Controller;
@@ -9,22 +9,22 @@ use Illuminate\Support\Collection;
 use LogicException;
 
 // Uncomment your required Providers here
-// use Winter\SiteSearch\Classes\Providers\ArrizalaminPortfolioResultsProvider;
-use Winter\SiteSearch\Classes\Providers\CmsPagesResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\FeeglewebOctoshopProductsResultsProvider;
-use Winter\SiteSearch\Classes\Providers\GenericResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\GrakerPhotoAlbumsResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\IndikatorNewsResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\JiriJKShopResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\OfflineSnipcartShopResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\RadiantWebProBlogResultsProvider;
-use Winter\SiteSearch\Classes\Providers\WinterBlogResultsProvider;
-use Winter\SiteSearch\Classes\Providers\WinterPagesResultsProvider;
-use Winter\SiteSearch\Classes\Providers\ResponsivShowcaseResultsProvider;
-use Winter\SiteSearch\Classes\Providers\ResultsProvider;
-// use Winter\SiteSearch\Classes\Providers\VojtaSvobodaBrandsResultsProvider;
-use Winter\SiteSearch\Models\QueryLog;
-use Winter\SiteSearch\Models\Settings;
+// use Skripteria\Sitesearch\Classes\Providers\ArrizalaminPortfolioResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\CmsPagesResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\FeeglewebOctoshopProductsResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\GenericResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\GrakerPhotoAlbumsResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\IndikatorNewsResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\JiriJKShopResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\OfflineSnipcartShopResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\RadiantWebProBlogResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\WinterBlogResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\WinterPagesResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\ResponsivShowcaseResultsProvider;
+use Skripteria\Sitesearch\Classes\Providers\ResultsProvider;
+// use Skripteria\Sitesearch\Classes\Providers\VojtaSvobodaBrandsResultsProvider;
+use Skripteria\Sitesearch\Models\QueryLog;
+use Skripteria\Sitesearch\Models\Settings;
 
 class SearchService
 {
@@ -76,7 +76,7 @@ class SearchService
 
         $resultsCollection->addMany($results->toArray());
 
-        $modified = Event::fire('winter.sitesearch.results', $resultsCollection);
+        $modified = Event::fire('skripteria.sitesearch.results', $resultsCollection);
 
         $modified = array_filter($modified);
 
@@ -129,11 +129,11 @@ class SearchService
      */
     protected function additionalResultsProviders()
     {
-        $returns = collect(Event::fire('winter.sitesearch.extend'))->filter()->flatten();
+        $returns = collect(Event::fire('skripteria.sitesearch.extend'))->filter()->flatten();
 
         $returns->each(function ($return) {
             if ( ! $return instanceof ResultsProvider) {
-                throw new LogicException('The winter.sitesearch.extend listener needs to return a ResultsProvider instance.');
+                throw new LogicException('The skripteria.sitesearch.extend listener needs to return a ResultsProvider instance.');
             }
         });
 

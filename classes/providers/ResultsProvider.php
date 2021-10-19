@@ -1,8 +1,8 @@
 <?php
 
-namespace Winter\SiteSearch\Classes\Providers;
+namespace Skripteria\Sitesearch\Classes\Providers;
 
-use Winter\SiteSearch\Classes\Result;
+use Skripteria\Sitesearch\Classes\Result;
 use RainLab\Translate\Classes\Translator;
 use System\Classes\PluginManager;
 use System\Models\File;
@@ -10,7 +10,7 @@ use System\Models\File;
 /**
  * Abstract base class for result providers
  *
- * @package Winter\SiteSearch\Classes\Providers
+ * @package Skripteria\Sitesearch\Classes\Providers
  */
 abstract class ResultsProvider
 {
@@ -62,7 +62,7 @@ abstract class ResultsProvider
     /**
      * Search your contents for matching models.
      *
-     * Create a new instance of the Winter\SiteSearch\Classes\Result class
+     * Create a new instance of the Skripteria\Sitesearch\Classes\Result class
      * for every one of your results. Then add it to the results collection
      * by calling the addResult() method.
      *
@@ -86,7 +86,7 @@ abstract class ResultsProvider
      * A unique identifier for this provider.
      *
      * It is recommended to return the plugin identifier
-     * string used by Winter. Eg: Winter.SiteSearch
+     * string used by Winter. Eg: skripteria.sitesearch
      *
      * @return string
      */

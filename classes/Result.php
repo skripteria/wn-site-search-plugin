@@ -1,11 +1,11 @@
 <?php
 
-namespace Winter\SiteSearch\Classes;
+namespace Skripteria\Sitesearch\Classes;
 
 use Config;
 use Html;
 use Winter\Storm\Database\Model;
-use Winter\SiteSearch\Models\Settings;
+use Skripteria\Sitesearch\Models\Settings;
 use Str;
 use System\Models\File;
 use URL;
@@ -13,7 +13,7 @@ use URL;
 /**
  * Object to store a result's data.
  *
- * @package Winter\SiteSearch\Classes
+ * @package Skripteria\Sitesearch\Classes
  */
 class Result
 {

@@ -1,4 +1,4 @@
-<?php namespace Winter\SiteSearch\Components;
+<?php namespace Skripteria\Sitesearch\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -14,8 +14,8 @@ class SiteSearchInclude extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'winter.sitesearch::lang.siteSearchInclude.title',
-            'description' => 'winter.sitesearch::lang.siteSearchInclude.description',
+            'name'        => 'skripteria.sitesearch::lang.siteSearchInclude.title',
+            'description' => 'skripteria.sitesearch::lang.siteSearchInclude.description',
         ];
     }
 

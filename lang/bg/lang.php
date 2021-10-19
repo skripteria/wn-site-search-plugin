@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Глобално търсене за вашия фронтенд',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Управление на SiteSearch настройките',
         'manage_settings_permission' => 'Може да управлява SiteSearch настройките',
     ],

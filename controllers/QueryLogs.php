@@ -1,4 +1,4 @@
-<?php namespace Winter\SiteSearch\Controllers;
+<?php namespace Skripteria\Sitesearch\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -16,7 +16,7 @@ class QueryLogs extends Controller
     public $listConfig = 'config_list.yaml';
     public $importExportConfig = 'config_import_export.yaml';
 
-    public $requiredPermissions = ['winter.sitesearch.view_log'];
+    public $requiredPermissions = ['skripteria.sitesearch.view_log'];
 
     public function __construct()
     {

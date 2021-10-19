@@ -1,6 +1,6 @@
 <?php
 
-namespace Winter\SiteSearch\Classes;
+namespace Skripteria\Sitesearch\Classes;
 
 use DomainException;
 use Illuminate\Support\Collection;
@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
  * A collection of all search results
  * from all providers.
  *
- * @package Winter\SiteSearch\Classes
+ * @package Skripteria\Sitesearch\Classes
  */
 class ResultCollection extends Collection
 {

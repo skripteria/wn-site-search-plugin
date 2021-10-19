@@ -1,19 +1,19 @@
 <?php
 
-namespace Winter\SiteSearch\Classes\Providers;
+namespace Skripteria\Sitesearch\Classes\Providers;
 
 use Cms\Classes\Controller;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Illuminate\Database\Eloquent\Collection;
-use Winter\SiteSearch\Classes\Result;
-use Winter\SiteSearch\Classes\ResultData;
-use Winter\SiteSearch\Models\Settings;
+use Skripteria\Sitesearch\Classes\Result;
+use Skripteria\Sitesearch\Classes\ResultData;
+use Skripteria\Sitesearch\Models\Settings;
 
 /**
  * Searches the contents of native cms pages.
  *
- * @package Winter\SiteSearch\Classes\Providers
+ * @package Skripteria\Sitesearch\Classes\Providers
  */
 class CmsPagesResultsProvider extends ResultsProvider
 {

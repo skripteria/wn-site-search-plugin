@@ -2,7 +2,7 @@
     'plugin' => [
         'name' => 'SiteSearch',
         'description' => '在前端添加全局搜素',
-        'author' => 'Winter CMS',
+        'author' => 'Skripteria',
         'manage_settings' => '管理 SiteSearch 配置',
         'manage_settings_permission' => '可管理 SiteSearch 的设置',
     ],

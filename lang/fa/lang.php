@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'جستجو در سایت',
         'description'                => 'جستجوی جهانی توسعه دهنده رابط کاربری',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'مدیریت تنظیمات جستجوی سایت',
         'manage_settings_permission' => 'آیا می توانید تنظیمات جستجوی سایت را مدیریت کنید؟',
     ],

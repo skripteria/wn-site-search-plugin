@@ -3,19 +3,19 @@
 # ===================================
 
 # Record name
-name: winter.sitesearch::lang.log.title
+name: skripteria.sitesearch::lang.log.title
 
 # Model Form Field configuration
-form: $/winter/sitesearch/models/querylog/fields.yaml
+form: $/skripteria/sitesearch/models/querylog/fields.yaml
 
 # Model Class name
-modelClass: Winter\SiteSearch\Models\QueryLog
+modelClass: Skripteria\Sitesearch\Models\QueryLog
 
 # Default redirect location
-defaultRedirect: winter/sitesearch/querylogs
+defaultRedirect: skripteria/sitesearch/querylogs
 
 # Update page
 update:
-    title: winter.sitesearch::lang.log.title_update
-    redirect: winter/sitesearch/querylogs
-    redirectClose: winter/sitesearch/querylogs
+    title: skripteria.sitesearch::lang.log.title_update
+    redirect: skripteria/sitesearch/querylogs
+    redirectClose: skripteria/sitesearch/querylogs

@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Globální vyhledávání pro váš frontend',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Správa SiteSearch nastavení',
         'manage_settings_permission' => 'Možnost měnit SiteSearch nastavení',
         'view_log_permission'        => 'Možnost prohlížet protokol hledaných výrazů',

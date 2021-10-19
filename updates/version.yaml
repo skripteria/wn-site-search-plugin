@@ -160,7 +160,7 @@
 1.4.10:
     - 'Improved Czech translations'
 1.5.0:
-    - 'Added `winter.sitesearch.results` event to allow customization (filter, sort) of the results collection before it is displayed'
+    - 'Added `skripteria.sitesearch.results` event to allow customization (filter, sort) of the results collection before it is displayed'
 1.5.1:
     - 'Fixed typo in the newly added event name'
 1.5.2:
@@ -170,9 +170,9 @@
 1.5.4:
     - 'Fixed handling of invalid page url parameter'
 1.5.5:
-    - 'Fixed handling of invalid winter.sitesearch.results event returns'
+    - 'Fixed handling of invalid skripteria.sitesearch.results event returns'
 1.5.6:
     - 'Updated russian translations (thanks to @Web-VPF)'
 2.0.1:
     - 'Rebranded to Winter CMS'
-    - create_winter_sitesearch_query_logs.php
+    - create_skripteria_sitesearch_query_logs.php

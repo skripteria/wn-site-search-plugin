@@ -1,4 +1,4 @@
-<?php namespace Winter\SiteSearch\Updates;
+<?php namespace Skripteria\Sitesearch\Updates;
 
 use Schema;
 use Winter\Storm\Database\Updates\Migration;
@@ -7,7 +7,7 @@ class CreateWinterSitesearchQueryLogs extends Migration
 {
     public function up()
     {
-        Schema::create('winter_sitesearch_query_logs', function($table)
+        Schema::create('skripteria_sitesearch_query_logs', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -22,6 +22,6 @@ class CreateWinterSitesearchQueryLogs extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('winter_sitesearch_query_logs');
+        Schema::dropIfExists('skripteria_sitesearch_query_logs');
     }
 }

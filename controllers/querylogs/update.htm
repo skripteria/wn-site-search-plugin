@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('winter/sitesearch/querylogs') ?>">Query Logs</a></li>
+        <li><a href="<?= Backend::url('skripteria/sitesearch/querylogs') ?>">Query Logs</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -41,7 +41,7 @@
                     data-request-confirm="Delete this querylog?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('winter/sitesearch/querylogs') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('skripteria/sitesearch/querylogs') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('winter/sitesearch/querylogs') ?>" class="btn btn-default">Return to query logs list</a></p>
+    <p><a href="<?= Backend::url('skripteria/sitesearch/querylogs') ?>" class="btn btn-default">Return to query logs list</a></p>
 
 <?php endif ?>

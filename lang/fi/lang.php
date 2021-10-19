@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'Sivusto Haku',
         'description'                => 'Sivuston kattava haku',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Hallinnoi Sivusto Haun asetuksia',
         'manage_settings_permission' => 'saa hallita Sivusto Haun asetuksia',
     ],

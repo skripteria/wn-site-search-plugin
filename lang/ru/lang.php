@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Глобальный поиск для вашего фронтенда',
-        'author'                     => 'Winter CMS',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Управление настройками SiteSearch',
         'manage_settings_permission' => 'Разрешить управлять настройками SiteSearch',
         'view_log_permission'        => 'Может просматривать журнал поисковых запросов',

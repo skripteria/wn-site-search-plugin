@@ -1,22 +1,22 @@
 columns:
     id:
-        label: 'winter.sitesearch::lang.log.id'
+        label: 'skripteria.sitesearch::lang.log.id'
         type: number
     query:
-        label: 'winter.sitesearch::lang.log.query'
+        label: 'skripteria.sitesearch::lang.log.query'
         type: text
     domain:
-        label: 'winter.sitesearch::lang.log.domain'
+        label: 'skripteria.sitesearch::lang.log.domain'
         type: text
     location:
-        label: 'winter.sitesearch::lang.log.location'
+        label: 'skripteria.sitesearch::lang.log.location'
         type: text
     useragent:
-        label: 'winter.sitesearch::lang.log.useragent'
+        label: 'skripteria.sitesearch::lang.log.useragent'
         type: text
     session_id:
-        label: 'winter.sitesearch::lang.log.session_id'
+        label: 'skripteria.sitesearch::lang.log.session_id'
         type: text
     created_at:
-        label: 'winter.sitesearch::lang.log.created_at'
+        label: 'skripteria.sitesearch::lang.log.created_at'
         type: datetime

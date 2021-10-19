@@ -1,4 +1,4 @@
-<?php namespace Winter\SiteSearch\Models;
+<?php namespace Skripteria\Sitesearch\Models;
 
 use Model;
 use Cms\Classes\Page;
