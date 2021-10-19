@@ -21,7 +21,7 @@ You can translate all contents into your own language.
 
 ## Supported but deactivated
 
-These plugins are supported but inactivated by default.
+These plugins are supported but deactivated by default.
 You can manually activate them by removing the comments in following files:
 
 ```html
