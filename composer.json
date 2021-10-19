@@ -3,6 +3,7 @@
     "type": "winter-plugin",
     "description": "This plugin adds global search capabiliies to WinterCMS.",
     "homepage": "https://github.com/wintercms/wn-site-search-plugin",
+    "keywords": ["winter", "wintercms", "sitesearch", "search", "winter cms"],
     "license": "MIT",
     "authors": [
         {
@@ -21,7 +22,8 @@
         "source": "https://github.com/skripteria/wn-site-search-plugin"
     },
     "require": {
-        "composer/installers": "~1.0"
+        "php": ">=7.0",
+        "composer/installers": "~2.0"
     },
     "extra": {
         "installer-name": "sitesearch"
