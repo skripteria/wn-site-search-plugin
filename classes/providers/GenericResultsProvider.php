@@ -1,15 +1,15 @@
 <?php
-namespace OFFLINE\SiteSearch\Classes\Providers;
+namespace Skripteria\Sitesearch\Classes\Providers;
 
 use DomainException;
 use Event;
-use OFFLINE\SiteSearch\Classes\Result;
+use Skripteria\Sitesearch\Classes\Result;
 
 /**
  * Handles results that are provided by
  * other plugins via the event system.
  *
- * @package OFFLINE\SiteSearch\Classes\Providers
+ * @package Skripteria\Sitesearch\Classes\Providers
  */
 class GenericResultsProvider extends ResultsProvider
 {
@@ -21,7 +21,7 @@ class GenericResultsProvider extends ResultsProvider
      */
     public function search()
     {
-        $returns = array_filter(Event::fire('offline.sitesearch.query', $this->query));
+        $returns = array_filter(Event::fire('skripteria.sitesearch.query', $this->query));
 
         foreach ($returns as $return) {
             $results  = array_key_exists('results', $return) ? $return['results'] : [];

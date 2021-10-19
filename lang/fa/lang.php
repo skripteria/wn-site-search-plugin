@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'جستجو در سایت',
         'description'                => 'جستجوی جهانی توسعه دهنده رابط کاربری',
-        'author'                     => 'Offline LLC',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'مدیریت تنظیمات جستجوی سایت',
         'manage_settings_permission' => 'آیا می توانید تنظیمات جستجوی سایت را مدیریت کنید؟',
     ],
@@ -39,8 +39,7 @@
         'jkshop_itemurl_comment'     => 'Gib nur den statischen Teil der URL ein, keine dynamischen Parameter',
         'jkshop_itemurl_badge'       => 'محصولات',
         'experimental'               => 'ویژگی های تجربی:',
-        'experimental_refer_to_docs' => 'این ارائه دهنده تجربی است. لطفا به <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">اسنادو مدارک</a>قبل از استفاده از آن است.',
+        'experimental_refer_to_docs' => 'Please refer to the documentation',
     ],
     'searchResults'     => [
         'title'       => 'نتایج جستجو',

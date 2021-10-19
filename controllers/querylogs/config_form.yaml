@@ -3,19 +3,19 @@
 # ===================================
 
 # Record name
-name: offline.sitesearch::lang.log.title
+name: skripteria.sitesearch::lang.log.title
 
 # Model Form Field configuration
-form: $/offline/sitesearch/models/querylog/fields.yaml
+form: $/skripteria/sitesearch/models/querylog/fields.yaml
 
 # Model Class name
-modelClass: OFFLINE\SiteSearch\Models\QueryLog
+modelClass: Skripteria\Sitesearch\Models\QueryLog
 
 # Default redirect location
-defaultRedirect: offline/sitesearch/querylogs
+defaultRedirect: skripteria/sitesearch/querylogs
 
 # Update page
 update:
-    title: offline.sitesearch::lang.log.title_update
-    redirect: offline/sitesearch/querylogs
-    redirectClose: offline/sitesearch/querylogs
+    title: skripteria.sitesearch::lang.log.title_update
+    redirect: skripteria/sitesearch/querylogs
+    redirectClose: skripteria/sitesearch/querylogs

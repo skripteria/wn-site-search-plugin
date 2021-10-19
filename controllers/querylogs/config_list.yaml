@@ -1,7 +1,7 @@
-list: $/offline/sitesearch/models/querylog/columns.yaml
-modelClass: OFFLINE\SiteSearch\Models\QueryLog
-title: offline.sitesearch::lang.log.title
-recordUrl: offline/sitesearch/querylogs/update/:id
+list: $/skripteria/sitesearch/models/querylog/columns.yaml
+modelClass: Skripteria\Sitesearch\Models\QueryLog
+title: skripteria.sitesearch::lang.log.title
+recordUrl: skripteria/sitesearch/querylogs/update/:id
 noRecordsMessage: backend::lang.list.no_records
 recordsPerPage: 20
 showPageNumbers: true

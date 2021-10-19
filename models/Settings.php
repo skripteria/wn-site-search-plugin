@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\SiteSearch\Models;
+<?php namespace Skripteria\Sitesearch\Models;
 
 use Model;
 use Cms\Classes\Page;
@@ -12,7 +12,7 @@ class Settings extends Model
 
     // Reference to field configuration
     public $settingsFields = 'fields.yaml';
-    
+
     /**
      *
      * Returns pages list for blog page selection

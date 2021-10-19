@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'Sivusto Haku',
         'description'                => 'Sivuston kattava haku',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Hallinnoi Sivusto Haun asetuksia',
         'manage_settings_permission' => 'saa hallita Sivusto Haun asetuksia',
     ],
@@ -39,8 +39,7 @@
         'jkshop_itemurl_comment'     => 'Sisällytä vain URL-osoitteen kiinteä osa ilman dynaamisia parametreja',
         'jkshop_itemurl_badge'       => 'Tuotetunnus',
         'experimental'               => 'Kokeellinen ominaisuus:',
-        'experimental_refer_to_docs' => 'Tämä tarjoaja on kokeellinen! Ole hyvä ja tutustu <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">dokumentaatioon</a> ennen käyttöönottoa.',
+        'experimental_refer_to_docs' => 'Tämä tarjoaja on kokeellinen! ',
     ],
     'searchResults'     => [
         'title'       => 'Hakutulokset',

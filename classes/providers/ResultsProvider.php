@@ -1,8 +1,8 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Classes\Providers;
+namespace Skripteria\Sitesearch\Classes\Providers;
 
-use OFFLINE\SiteSearch\Classes\Result;
+use Skripteria\Sitesearch\Classes\Result;
 use RainLab\Translate\Classes\Translator;
 use System\Classes\PluginManager;
 use System\Models\File;
@@ -10,7 +10,7 @@ use System\Models\File;
 /**
  * Abstract base class for result providers
  *
- * @package OFFLINE\SiteSearch\Classes\Providers
+ * @package Skripteria\Sitesearch\Classes\Providers
  */
 abstract class ResultsProvider
 {
@@ -53,7 +53,7 @@ abstract class ResultsProvider
     public function __construct($query = null)
     {
         $this->setQuery($query);
-        
+
         $this->identifier  = $this->identifier();
         $this->displayName = $this->displayName();
         $this->translator  = $this->translator();
@@ -62,7 +62,7 @@ abstract class ResultsProvider
     /**
      * Search your contents for matching models.
      *
-     * Create a new instance of the OFFLINE\SiteSearch\Classes\Result class
+     * Create a new instance of the Skripteria\Sitesearch\Classes\Result class
      * for every one of your results. Then add it to the results collection
      * by calling the addResult() method.
      *
@@ -86,7 +86,7 @@ abstract class ResultsProvider
      * A unique identifier for this provider.
      *
      * It is recommended to return the plugin identifier
-     * string used by October. Eg: OFFLINE.SiteSearch
+     * string used by Winter. Eg: skripteria.sitesearch
      *
      * @return string
      */
@@ -164,7 +164,7 @@ abstract class ResultsProvider
 
 
     /**
-     * Check if the Rainlab.Translate plugin is installed
+     * Check if the Winter.Translate plugin is installed
      * and if yes, get the translator instance.
      *
      * @return Translator|bool

@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Pesquisa global para o seu frontend',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Gerenciar configurações do SiteSearch',
         'manage_settings_permission' => 'Pode gerenciar as configurações do SiteSearch',
     ],
@@ -35,8 +35,7 @@
         'jkshop_itemurl_comment'     => 'Apenas especifique a parte fixa do URL sem parâmetros dinâmicos',
         'jkshop_itemurl_badge'       => 'Produto',
         'experimental'               => 'Recurso experimental:',
-        'experimental_refer_to_docs' => 'Este provedor é experimental! Por favor, consulte <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">the documentation</a> antes de usá-lo.',
+        'experimental_refer_to_docs' => 'Este provedor é experimental!',
     ],
     'searchResults'     => [
         'title'       => 'Resultados da pesquisa',

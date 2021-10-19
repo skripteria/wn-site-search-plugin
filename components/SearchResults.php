@@ -1,16 +1,16 @@
-<?php namespace OFFLINE\SiteSearch\Components;
+<?php namespace Skripteria\Sitesearch\Components;
 
 use DomainException;
 use Event;
 use Illuminate\Pagination\LengthAwarePaginator;
-use OFFLINE\SiteSearch\Classes\ResultCollection;
-use OFFLINE\SiteSearch\Classes\SearchService;
+use Skripteria\Sitesearch\Classes\ResultCollection;
+use Skripteria\Sitesearch\Classes\SearchService;
 use Request;
 use Url;
 
 /**
  * SearchResults Component
- * @package OFFLINE\SiteSearch\Components
+ * @package Skripteria\Sitesearch\Components
  */
 class SearchResults extends BaseComponent
 {
@@ -70,8 +70,8 @@ class SearchResults extends BaseComponent
     public function componentDetails()
     {
         return [
-            'name'        => 'offline.sitesearch::lang.searchResults.title',
-            'description' => 'offline.sitesearch::lang.searchResults.description',
+            'name'        => 'skripteria.sitesearch::lang.searchResults.title',
+            'description' => 'skripteria.sitesearch::lang.searchResults.description',
         ];
     }
 
@@ -84,28 +84,28 @@ class SearchResults extends BaseComponent
     {
         return [
             'resultsPerPage'    => [
-                'title'             => 'offline.sitesearch::lang.searchResults.properties.results_per_page.title',
+                'title'             => 'skripteria.sitesearch::lang.searchResults.properties.results_per_page.title',
                 'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'Please enter only numbers',
                 'default'           => '10',
             ],
             'showProviderBadge' => [
-                'title'       => 'offline.sitesearch::lang.searchResults.properties.provider_badge.title',
-                'description' => 'offline.sitesearch::lang.searchResults.properties.provider_badge.description',
+                'title'       => 'skripteria.sitesearch::lang.searchResults.properties.provider_badge.title',
+                'description' => 'skripteria.sitesearch::lang.searchResults.properties.provider_badge.description',
                 'type'        => 'checkbox',
                 'default'     => 1,
             ],
             'noResultsMessage'  => [
-                'title'             => 'offline.sitesearch::lang.searchResults.properties.no_results.title',
-                'description'       => 'offline.sitesearch::lang.searchResults.properties.no_results.description',
+                'title'             => 'skripteria.sitesearch::lang.searchResults.properties.no_results.title',
+                'description'       => 'skripteria.sitesearch::lang.searchResults.properties.no_results.description',
                 'type'              => 'string',
                 'default'           => 'Your search returned no results.',
                 'showExternalParam' => false,
             ],
             'visitPageMessage'  => [
-                'title'             => 'offline.sitesearch::lang.searchResults.properties.visit_page.title',
-                'description'       => 'offline.sitesearch::lang.searchResults.properties.visit_page.description',
+                'title'             => 'skripteria.sitesearch::lang.searchResults.properties.visit_page.title',
+                'description'       => 'skripteria.sitesearch::lang.searchResults.properties.visit_page.description',
                 'type'              => 'string',
                 'default'           => 'Visit page',
                 'showExternalParam' => false,

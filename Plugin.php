@@ -1,6 +1,6 @@
-<?php namespace OFFLINE\SiteSearch;
+<?php namespace Skripteria\Sitesearch;
 
-use OFFLINE\SiteSearch\Models\Settings;
+use Skripteria\Sitesearch\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -16,11 +16,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'offline.sitesearch::lang.plugin.name',
-            'description' => 'offline.sitesearch::lang.plugin.description',
-            'author' => 'offline.sitesearch::lang.plugin.author',
+            'name' => 'skripteria.sitesearch::lang.plugin.name',
+            'description' => 'skripteria.sitesearch::lang.plugin.description',
+            'author' => 'skripteria.sitesearch::lang.plugin.author',
             'icon' => 'icon-search',
-            'homepage' => 'https://github.com/OFFLINE-GmbH/oc-site-search-plugin',
+            'homepage' => 'https://github.com/wintercms/wn-site-search-plugin',
         ];
     }
 
@@ -32,9 +32,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'OFFLINE\SiteSearch\Components\SearchResults' => 'searchResults',
-            'OFFLINE\SiteSearch\Components\SearchInput' => 'searchInput',
-            'OFFLINE\SiteSearch\Components\SiteSearchInclude' => 'siteSearchInclude',
+            'Skripteria\Sitesearch\Components\SearchResults' => 'searchResults',
+            'Skripteria\Sitesearch\Components\SearchInput' => 'searchInput',
+            'Skripteria\Sitesearch\Components\SiteSearchInclude' => 'siteSearchInclude',
         ];
     }
 
@@ -46,13 +46,13 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'offline.sitesearch.manage_settings' => [
-                'tab' => 'offline.sitesearch::lang.plugin.name',
-                'label' => 'offline.sitesearch::lang.plugin.manage_settings_permission',
+            'skripteria.sitesearch.manage_settings' => [
+                'tab' => 'skripteria.sitesearch::lang.plugin.name',
+                'label' => 'skripteria.sitesearch::lang.plugin.manage_settings_permission',
             ],
-            'offline.sitesearch.view_log' => [
-                'tab' => 'offline.sitesearch::lang.plugin.name',
-                'label' => 'offline.sitesearch::lang.plugin.view_log_permission',
+            'skripteria.sitesearch.view_log' => [
+                'tab' => 'skripteria.sitesearch::lang.plugin.name',
+                'label' => 'skripteria.sitesearch::lang.plugin.view_log_permission',
             ],
         ];
     }
@@ -66,14 +66,14 @@ class Plugin extends PluginBase
     {
         $settings = [
             'config' => [
-                'label' => 'offline.sitesearch::lang.plugin.name',
-                'description' => 'offline.sitesearch::lang.plugin.manage_settings',
+                'label' => 'skripteria.sitesearch::lang.plugin.name',
+                'description' => 'skripteria.sitesearch::lang.plugin.manage_settings',
                 'category' => 'system::lang.system.categories.cms',
                 'icon' => 'icon-search',
-                'class' => 'Offline\SiteSearch\Models\Settings',
+                'class' => 'Skripteria\Sitesearch\Models\Settings',
                 'order' => 100,
                 'keywords' => 'search',
-                'permissions' => ['offline.sitesearch.manage_settings'],
+                'permissions' => ['skripteria.sitesearch.manage_settings'],
             ],
         ];
 
@@ -82,13 +82,13 @@ class Plugin extends PluginBase
         }
 
         $settings['querylogs'] = [
-            'label' => 'offline.sitesearch::lang.log.title',
-            'description' => 'offline.sitesearch::lang.log.description',
+            'label' => 'skripteria.sitesearch::lang.log.title',
+            'description' => 'skripteria.sitesearch::lang.log.description',
             'category' => 'system::lang.system.categories.cms',
-            'url' => \Backend::url('offline/sitesearch/querylogs'),
+            'url' => \Backend::url('skripteria/sitesearch/querylogs'),
             'keywords' => 'search log query queries',
             'icon' => 'icon-search',
-            'permissions' => ['offline.sitesearch.*'],
+            'permissions' => ['skripteria.sitesearch.*'],
             'order' => 99,
         ];
 

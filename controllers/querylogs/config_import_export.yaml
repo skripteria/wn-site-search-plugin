@@ -1,4 +1,4 @@
 export:
-    title: offline.sitesearch::lang.log.export
-    modelClass: OFFLINE\SiteSearch\Models\QueryLogExport
-    list: $/offline/sitesearch/models/querylog/columns.yaml
+    title: skripteria.sitesearch::lang.log.export
+    modelClass: Skripteria\Sitesearch\Models\QueryLogExport
+    list: $/skripteria/sitesearch/models/querylog/columns.yaml

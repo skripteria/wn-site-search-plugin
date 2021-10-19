@@ -2,7 +2,7 @@
     'plugin'            => [
         'name'                       => 'SiteSearch',
         'description'                => 'Global search for your frontend',
-        'author'                     => 'OFFLINE LLC',
+        'author'                     => 'Skripteria',
         'manage_settings'            => 'Manage SiteSearch settings',
         'manage_settings_permission' => 'Can manage SiteSearch settings',
         'view_log_permission'        => 'Can view query log',
@@ -42,8 +42,7 @@
         'jkshop_itemurl_comment'     => 'Only specify the fixed part of the URL without any dynamic parameters',
         'jkshop_itemurl_badge'       => 'Product',
         'experimental'               => 'Experimental feature:',
-        'experimental_refer_to_docs' => 'This provider is experimental! Please refer to <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">the documentation</a> before using it.',
+        'experimental_refer_to_docs' => 'This provider is experimental!',
         'news_page'                  => 'News post page',
         'news_page_comment'          => 'Select a page used to display a single news post. Needed to form URL for news.',
     ],

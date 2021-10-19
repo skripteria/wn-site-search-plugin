@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\SiteSearch\Models;
+<?php namespace Skripteria\Sitesearch\Models;
 
 use Cache;
 use Model;
@@ -8,11 +8,11 @@ use Model;
  */
 class QueryLog extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     public $timestamps = false;
 
-    public $table = 'offline_sitesearch_query_logs';
+    public $table = 'winter_sitesearch_query_logs';
     public $fillable = [
         'query',
         'domain',

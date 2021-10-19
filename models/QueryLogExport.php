@@ -1,4 +1,4 @@
-<?php namespace OFFLINE\SiteSearch\Models;
+<?php namespace Skripteria\Sitesearch\Models;
 
 class QueryLogExport extends \Backend\Models\ExportModel
 {

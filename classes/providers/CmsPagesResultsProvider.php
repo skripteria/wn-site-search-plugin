@@ -1,19 +1,19 @@
 <?php
 
-namespace OFFLINE\SiteSearch\Classes\Providers;
+namespace Skripteria\Sitesearch\Classes\Providers;
 
 use Cms\Classes\Controller;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Illuminate\Database\Eloquent\Collection;
-use OFFLINE\SiteSearch\Classes\Result;
-use OFFLINE\SiteSearch\Classes\ResultData;
-use OFFLINE\SiteSearch\Models\Settings;
+use Skripteria\Sitesearch\Classes\Result;
+use Skripteria\Sitesearch\Classes\ResultData;
+use Skripteria\Sitesearch\Models\Settings;
 
 /**
  * Searches the contents of native cms pages.
  *
- * @package OFFLINE\SiteSearch\Classes\Providers
+ * @package Skripteria\Sitesearch\Classes\Providers
  */
 class CmsPagesResultsProvider extends ResultsProvider
 {
@@ -37,7 +37,7 @@ class CmsPagesResultsProvider extends ResultsProvider
             // Render page in empty layout.
             $page->settings['layout'] = null;
 
-            $contents = \Html::strip((new Controller())->runPage($page));
+            $contents = \Html::strip((new Controller())->runPage($page, false));
             if ( ! $this->containsQueryIn($contents, $page)) {
                 continue;
             }

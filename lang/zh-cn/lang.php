@@ -2,7 +2,7 @@
     'plugin' => [
         'name' => 'SiteSearch',
         'description' => '在前端添加全局搜素',
-        'author' => 'OFFLINE LLC',
+        'author' => 'Skripteria',
         'manage_settings' => '管理 SiteSearch 配置',
         'manage_settings_permission' => '可管理 SiteSearch 的设置',
     ],
@@ -39,8 +39,7 @@
         'jkshop_itemurl_comment' => '只指定URL的固定部分，不包含任何动态参数',
         'jkshop_itemurl_badge' => '产品',
         'experimental' => '试验特点:',
-        'experimental_refer_to_docs' => '该数据提供者是试验性的!使用前请参考 <a target="_blank"
-href="https://octobercms.com/plugin/offline-sitesearch#documentation">文件</a> .',
+        'experimental_refer_to_docs' => 'Please refer to the documentation.',
     ],
     'searchResults' => [
         'title' => '搜索结果',

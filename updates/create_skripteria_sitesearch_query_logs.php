@@ -1,13 +1,13 @@
-<?php namespace OFFLINE\SiteSearch\Updates;
+<?php namespace Skripteria\Sitesearch\Updates;
 
 use Schema;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
-class CreateOfflineSitesearchQueryLogs extends Migration
+class CreateWinterSitesearchQueryLogs extends Migration
 {
     public function up()
     {
-        Schema::create('offline_sitesearch_query_logs', function($table)
+        Schema::create('skripteria_sitesearch_query_logs', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -19,9 +19,9 @@ class CreateOfflineSitesearchQueryLogs extends Migration
             $table->timestamp('created_at')->nullable();
         });
     }
-    
+
     public function down()
     {
-        Schema::dropIfExists('offline_sitesearch_query_logs');
+        Schema::dropIfExists('skripteria_sitesearch_query_logs');
     }
 }
