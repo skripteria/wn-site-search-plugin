@@ -2,6 +2,8 @@
 
 This plugin adds global search capabilities to WinterCMS.
 
+Credits and spectial thanks to OFFLINE Gmbh who originally developed this great plugin for October CMS!
+
 ## Available languages
 
 * English
